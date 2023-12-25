@@ -1,0 +1,33 @@
+.box{
+    width: 400px;
+    height: 400px;
+    background-color: beige;
+    border: 2px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 3s ease-in 1s;
+}
+.container{
+    width: 100vw;
+    height: 100vh;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    transform: rotate(-350deg);
+    transform: scaley(1.5);
+    transform: skew(-25deg);
+    transform: translate(-500px,-500px);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: rotate3d(1, 2, 3, 10deg);
+    transform: translate3d(12px, 50%, 3em);
+}
+
+p{
+    font-size: 36px;
+    text-shadow: 1px 1px 2px red;
+}

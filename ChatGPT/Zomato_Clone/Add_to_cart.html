@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering Website</title>
+    <style>
+        /* Your CSS styles remain unchanged */
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Food Ordering</h1>
+    </header>
+
+    <section id="food-items">
+        <!-- Food items will be dynamically added here through API -->
+        <!-- Sample food item -->
+        <div class="food-item" data-id="1" data-name="Food Name" data-description="Description of the food item. Lorem ipsum dolor sit amet, consectetur adipiscing elit." data-price="10.99">
+            <img src="https://via.placeholder.com/300" alt="Food Item">
+            <h2>Food Name</h2>
+            <p>Description of the food item. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $10.99</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <!-- Add more food items as needed -->
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Food Ordering</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the food items container
+            const foodItemsContainer = document.getElementById('food-items');
+
+            // Add click event listener to all "Add to Cart" buttons
+            foodItemsContainer.addEventListener('click', function(event) {
+                if (event.target.classList.contains('add-to-cart-btn')) {
+                    // Get the parent food item
+                    const foodItem = event.target.closest('.food-item');
+
+                    // Get the data attributes of the selected food item
+                    const itemId = foodItem.dataset.id;
+                    const itemName = foodItem.dataset.name;
+                    const itemDescription = foodItem.dataset.description;
+                    const itemPrice = parseFloat(foodItem.dataset.price);
+
+                    // Create a new cart item object
+                    const cartItem = {
+                        id: itemId,
+                        name: itemName,
+                        description: itemDescription,
+                        price: itemPrice,
+                        quantity: 1
+                    };
+
+                    // Store the cart item in the session storage
+                    let cartItems = JSON.parse(sessionStorage.getItem('cartItems')) || [];
+                    cartItems.push(cartItem);
+                    sessionStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+                    // Redirect to the cart page
+                    window.location.href = 'cart.html';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

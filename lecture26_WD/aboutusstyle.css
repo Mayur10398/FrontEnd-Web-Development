@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 1000vh;
+    width: 100%;
+    overflow-x: none;
+    background-image: linear-gradient(0deg, #FAACA8 0%, #DDD6F3 100%);
+}
+.navContainer{
+    width: 100vw;
+    background-color: #465eaf;
+    background-image: linear-gradient(0deg, #c7b543 0%, #5783e1 86%);
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}

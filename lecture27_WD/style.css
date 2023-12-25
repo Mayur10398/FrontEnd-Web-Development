@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* This CSS is for index.html.  */
+h1{
+    text-align: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(90deg, #D9AFD9 0%, #97D9E1 100%);
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 500px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: rgba(39, 103, 220, 0.953);
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.9rem;
+    box-shadow: 10px 5px 5px rgba(226, 67, 216, 0.826);
+}
+.box img{
+    border-radius: 10px;
+}
+
+/* This CSS is for one.html file. */
+.container1{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid #8edaad;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(90deg, #8edaad 0%, #97D9E1 100%);
+    justify-content: center;
+    align-items: center;
+}
+.container1 .box1{
+    background-color: aliceblue;
+    box-shadow: 10px 5px 5px #8edaac8e;
+    border-radius: 20px;
+    width: 497px;
+    height: 850px;
+    gap: 20px;
+    text-align: center;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-size: 1.2rem;
+}
+.box1 .textbox{
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    padding: 10px;
+    justify-content: space-around;
+    /* align-items: center; */
+    gap: 10px;
+    width: 70%;
+    /* text-align: center; */
+}
+.pricing{
+    margin: 30px;
+    padding: 20px;
+    background-color: #8edaad;
+    width: 80%;
+    height: 10%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 39px;
+    font-size: 1.2rem;
+}
+.container1 .box1 .pricing img{
+    width: 100px;
+    height: 100px;  
+}
+.container1 .box1 img{
+    border-radius: 6% 6% 0% 0%;
+    width: 499px;
+    height: 280px;
+}
+button{
+    width: 80%;
+    height: 10%;
+    background-color: rgba(4, 4, 70, 0.947);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    color: aliceblue;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
